@@ -10,7 +10,6 @@
 
 <body>
     <script>
-
         /* 
         
             拆数字
@@ -60,12 +59,13 @@
         var s = parseInt(timer % (60 * 60 * 24) / (60 * 60));
         // 换算分钟，去掉整天和整小时的秒数，然后在计算
         // 得到的就是不够一个小时的秒数
-        var f = parseInt(timer % (60 * 60 ) / 60);
+        var f = parseInt(timer % (60 * 60) / 60);
         // 换算分钟 得到不够一分钟的秒数
         // 直接取余60
         var m = parseInt(timer % 60)
         console.log(t, s, f, m);
 
+        var aaa = 10;
     </script>
 </body>
 
