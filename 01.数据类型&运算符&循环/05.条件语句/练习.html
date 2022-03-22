@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 把每一位数字取出来
+        var num = 295091;
+        var yi = parseInt(num / 100000)
+        console.log(yi);
+        var er = parseInt(num / 10000) % 10;
+        console.log(er);
+        var san = parseInt(num / 1000) % 10;
+        console.log(san);
+        var si = parseInt(num / 100) % 10;
+        console.log(si);
+        var wu = parseInt(num / 10) % 10
+        console.log(wu);
+        var liu = parseInt(num % 10)
+        console.log(liu);
+
+        //随机秒数 换算成 天 小时 分钟 秒
+        var s = 86456;
+        var t = parseFloat(s / 60 / 60 / 24)
+        var x = parseFloat(s / 60 / 60)
+        var f = parseFloat(s / 60);
+        var m = parseFloat(s % 60)
+        console.log(t);
+        console.log(x);
+        console.log(f);
+        console.log(m);
+    </script>
+</body>
+
+</html>

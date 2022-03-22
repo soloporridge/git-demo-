@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        /* 
+
+            条件分支语句
+                根据一个条件来决定是不是执行某一段代码
+                分成两种
+                    1.if
+                    2.switch
+            1. if 语句
+                四种书写格式
+                    1. if(条件){要执行的代码}
+                        当条件满足的时候(表达式为true)，{}里面的代码执行
+                        当条件不满足的时候(表达式为false)，{}里面代码不执行
+                    2. if(条件表达式){要执行的代码}else{要执行的代码}
+                        当条件满足的时候，执行if后面的{}
+                        当条件不满足的时候，执行else后面的{}
+                        两个代码段 必然会执行一个
+                     3.if(条件1){条件1要执行的代码}else if(条件2){条件2要执行的代码}
+                        从第一个开始，哪一个条件满足，执行那个一个{}里面的代码
+                        如果前面的满足了，那么后面的就都不执行了
+                        若干个大括号，最多只能执行一个   
+                    4.if(条件1){条件1要执行的代码}else if(条件2){条件2要执行的代码} else{所有条件都不满足执行}
+                        从第一个开始，哪一个条件满足，执行那个一个{}里的代码
+                        然后前面的满足了，后面的都不执行了
+                        所有条件都不满足的时候 执行else里的代码
+                        若干个{}必然有一个会执行
+        */
+
+
+        // 1-1 if语句
+        // var n = 1;
+        // if(n >= 18){
+        //     console.log('执行了');
+        // }
+        // console.log('后续代码');
+
+
+        // 1.2 if else语句
+        // var n =17.99;
+        // if(n>=18){
+        //     console.log('成年');
+        // }else{
+        //     console.log('未成年');
+        // }
+
+        // console.log('后续');
+
+        // 1.3 if else if 语句
+
+        // var n =18;
+        // if(n>=23){
+        //     console.log('结婚');
+        // }else if(n>= 13){
+        //     console.log('初中');
+        // } else if(n >= 7){
+        //     console.log('小学');
+        // }
+
+        // 1.4 if else if  else
+            var n =18;
+        if(n>=23){
+            console.log('结婚');
+        }else if(n>= 13){
+            console.log('初中');
+        } else if(n >= 7){
+            console.log('小学');
+        }else{
+            console.log('幼儿园');
+        }
+    </script>
+    
+</body>
+</html>

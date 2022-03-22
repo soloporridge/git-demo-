@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        
+            在页面打印闰年
+            打印1000~2000 之间所有的闰年
+        
+            思路
+                多添加一个计数器
+                没输出 +1
+                当这个数是4的倍数的时候，表示已经输出了4个
+        */
+    //    计算器从1开始
+        var num = 1;
+        for (let i = 1000; i <= 2004; i++) {
+            if (i % 4 === 0 && i % 100 !== 0 || i % 400 === 0) {
+                document.write(i + ' ')
+                // 判断的是预备下一次前，也就是当前这一次
+                if (num % 4 === 0) {
+                    document.write('<br>')
+                }
+                // 此时这里的初始值是1
+                // 这里的num++ 是预备下一次
+                num++
+            }
+        }
+
+        // 计算器从0开始
+        var num = 0;
+        for (let i = 1000; i <= 2004; i++) {
+            if (i % 4 === 0 && i % 100 !== 0 || i % 400 === 0) {
+                document.write(i + ' ')
+                // 此时的初始值是 0
+                // 这里的num++ 执行一次+一次
+                num++
+                if (num % 4 === 0) {
+                    document.write('<br>')
+                }
+                
+            }
+        }
+    </script>
+</body>
+
+</html>

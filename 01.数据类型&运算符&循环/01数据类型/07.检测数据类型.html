@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* 
+        
+            检测数据类型
+                在运算的过程中，有的数据不是我们自己写的
+                有可能是通过运算得到的，有可能是别人给的
+                为了保证程序的正确运行，我们需要检测数据变量
+
+
+            关键字 typeof
+                两种用法
+                    typeof 变量
+                    =》 typeof 要检测的变量
+                    =》返回结果：以字符串的形式给变量数据类型
+                    typeof (变量)
+                    语法 typeof(要检测的变量)
+                    返回值；以字符串的形式给变量的数据类型
+            两种语法的区别
+                1.typeof 只能检测紧跟着的一个变量
+                2.typeof() 先运算括号里的结果 在检测结果数据类型
+            typeof返回值
+                注意 typeof 返回值是一个字符串
+                当两个及以上typeof 连用的时候一定得到string
+                只能准确的检测基本数据类型
+                数值：number
+                字符串：string
+                布尔：Boolean
+                Undefined：undefined
+                null：object
+        */
+
+
+        var n1 = 100;
+        // 使用 typeof 关键字 检测n1的变量
+        //把结果赋值给 res
+        var res = typeof n1;
+        console.log(res);
+
+        var s = 'strong';
+        var res1 = typeof (s);
+        console.log(res1);
+
+
+        // 1.需求；计算 100 +200的结果数据类型
+        var n3 = 100;
+        var n4 = 200;
+        // 先运算typeof n3
+        // 用typeof n3 的结果去和n2进行加法运算
+        var res1 = typeof n3 + n4;
+        console.log(res1);
+
+        //先运算 n3 + n4
+        // 再去检测运算结果后的 数据类型
+        var res2 = typeof (n3 + n4);
+        console.log(res2);
+
+
+        // typeof 连用
+        var f1 = 100;
+        //从用向右向左进行运算
+        //先计算 2号检测 f1的结果
+        // 在计算1号检测符 2号返回的结果
+        var res4 = typeof typeof f1
+        console.log(res4);
+
+        console.log('<br>');
+
+        console.log(typeof 100);
+        console.log(typeof '100');
+        console.log(typeof false);
+        console.log(typeof undefined);
+        console.log(typeof null);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /*
+            运算符  比较运算符
+                就是两个数据进行比较的符号
+                1. >
+                    左边大于右边得到 true
+                    左边不大于右边得到 false
+                2. <
+                    左边不小于右边得到 true
+                    左边小于右边得到 false
+                3. >=
+                    左边大于等于右边得到true
+                    左边小于右边的false
+                4. <=
+                    左边小于等于右边得到true
+                    左边大于右边得到false
+                5. ==
+                    = 比较两边的数据值是不是相等  不管数据类型 只看值
+                        相等返回true
+                        不相等返回false
+                6. ===
+                    = 比较两边的数据值是不是相等 值和数据类型都要比较
+                7. !=
+                    = 比较两边的数据值是不是不等 不管数据类型
+
+                8. !==
+                    = 比较两边的数据是不是 不等，值和数据类型都要比较
+                    = 当数据类型不一样的时候,就是true了
+         */
+
+
+        // console.log(10 > 20);
+        // console.log(20 > 20);
+        // console.log(30 > 20);
+
+        // console.log(10 < 20);
+        // console.log(20 < 20);
+        // console.log(30 < 20); 
+
+        // console.log(10 >= 20);
+        // console.log(20 >= 20);
+        // console.log(30 >= 20);
+
+        // console.log(10 <= 20);
+        // console.log(20 <= 20);
+        // console.log(30 <= 20);
+
+        // console.log(10 == '10');
+        // console.log(20 == 20);
+        // console.log(10 == 1);
+        //console.log(undefined == null);
+
+        // console.log(10 === '10');
+        // console.log(20 === 20);
+        // console.log(10 === 1);
+        // console.log(undefined == null);
+
+        // console.log(1 != 2);
+        // console.log('1' != 1);
+        // console.log(undefined != null);
+        // console.log(1 != 1);
+        
+        console.log(1 !== '2');
+        console.log(1 !== 20);
+        console.log(null !== undefined);
+        console.log(1 !== 1);
+
+        /* 
+            随便一个数，在不过考虑四舍五入的情况下保留三位小数
+            前提：数字小数位超过三位
+        */
+
+        /* 
+            思路
+                一个数字，直接保留三位小数
+                就是从小数点后三位，剩下的不要了
+                有一个parseInt()方法取整
+                首先把数字扩大 1000倍
+                任何在取整
+                取整以后在缩小一千倍
+        */
+        var ff = 1245.32112 * 1000;
+        var asb =  parseInt(ff) / 1000;
+        console.log(asb);
+      
+    </script>
+</body>
+
+</html>

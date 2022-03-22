@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /* 
+        
+            条件语句  switch语句
+                条件分支语句的一种
+                语法：switch(要判断的变量){
+                    case 情况1：
+                        情况1执行的代码
+                        break
+                    case 情况2：
+                        情况2要执行的代码
+                        break
+                    case 情况n...
+                        情况n要执行的代码
+                        break
+                    default：
+                        所有条件都不满足的时候执行的代码
+                }
+                注意：
+                    1.每一个case和判断的变量关系必须是===才叫做满足
+                    2.switch 语句，只能判断准确的某一个字面量值，不能判断范围
+                    3.每一个 case 后面的break
+                        当书写 break的时候，执行完毕这个case的内容，就结束了
+                        当不写 break的时候，执行完毕这个case的内容，不管下一个case是不是满足都会执行
+                        一直遇到一个break为止，或者switch结束
+                    4.break的穿透是从第一个，满足条件的case开始进行穿透
+                    5.default 可以写可以不写
+                        作用类似于 if语句里的else
+                        当所有条件都不满足的时候执行default
+        */
+
+        // 1.标准语法
+        // var n = 'a';
+        // switch (n) {
+        //     case 18:
+        //         console.log('成年');
+        //         break;
+        //     case 17:
+        //         console.log('未成年');
+        //         break;
+        //     default:
+        //         console.log('输入一个数字');
+        // }
+        // console.log('后续代码');
+
+
+
+        //case 和 变量 必须是===
+        // var n = '18';
+        // switch (n) {
+        //     case 18:
+        //         console.log('成年');
+        //         break;
+        //     case 17:
+        //         console.log('未成年');
+        //         break;
+        //     default:
+        //         console.log('输入一个数字');
+        // }
+        // console.log('后续代码');
+
+        // 不能判断范围
+        // var n = 18;
+        // switch (n) {
+        //     case >18://语法错误
+        //         console.log('成年');
+        //         break;
+        //     case 17:
+        //         console.log('未成年');
+        //         break;
+        //     default:
+        //         console.log('输入一个数字');
+        // }
+        // console.log('后续代码');
+
+        // 3. break 的书写
+        // var n = 18;
+        // switch (n) {
+        //     case 17://语法错误
+        //         console.log('成年');
+
+        //     case 18:
+        //         console.log('未成年');
+
+        //     default:
+        //         console.log('输入一个数字');
+        // }
+        // console.log('后续代码');
+
+        // 不写default
+        var n = 20;
+        switch (n) {
+            case 17://语法错误
+                console.log('成年');
+                break;
+            case 18:
+                console.log('未成年');
+                break;
+
+        }
+        console.log('后续代码');
+
+
+        
+        
+    </script>
+</body>
+
+</html>

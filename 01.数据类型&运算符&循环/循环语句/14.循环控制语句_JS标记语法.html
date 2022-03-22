@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        
+        循环控制语句 JS 标记语法
+            break 关键字可以跳出循环，但是是跳出当前循环
+            标记语法自己做一个记号，想跳到那里跳到那里
+            直接在循环的开始位置做一个标记
+            名字：
+                当准备跳出的时候
+                break 标记
+                直接跳转到标记代表的循环结束位
+        */
+    //     i 这个循环的标记
+       here:
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= 3; j++) {
+                if (i === 3 && j === 2) {
+                    console.log('看到半条虫子');
+                    break here
+                }
+                console.log('吃第' + i + '个包子的第' + j + '口');
+            }
+            console.log('======');
+        }
+    </script>
+</body>
+
+</html>

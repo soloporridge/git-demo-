@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+
+        /* 
+            转换数据类型 转字符串
+                把其他数据类型转换字符串类型
+                    1.String()
+                        语法：String(要转换的数据)
+                        返回值：转换好的数据
+                        特点：
+                            任何数据类型都能转换
+                    2.toString()
+                        语法：要转换的数据toString()
+                        返回值：转换的数据
+                            特点：
+                                Undefined 和 null 不能转换
+                    3. +加法运算
+                        在JS里面 加号(+) 有两个意义
+                        1.进行字符串拼接
+                            只要符号任意一边是字符串的时候就是字符串拼接
+                        2.进行数学运算
+                            只有两边都是数字或者布尔值的时候，才会进行数学运算
+        */
+       //String
+       var n1 = 100;
+       var b1 = true;
+       var u;
+       var nu = null
+       var res = String(n1);
+       var res2 = String(b1);
+       console.log(res,res2);
+       console.log(String(u),String(nu));
+       //toString
+       var n2 = 101;
+       var n3 = true;
+       var u1;
+       var nu1 = null;
+       console.log(n2.toString());
+       console.log(n3.toString());
+       /*
+        报错
+       console.log(u1.toString());
+       console.log(nu1.toString());    */
+
+
+       /// 3. 加号运算
+
+       var n4 = 100;
+       var n5 = '1';
+       console.log(n4 + n5);
+
+       var n6 = '11';
+       var n7 = '22';
+       console.log(n6+n7);
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*  
+        
+            判断一个数字是不是质数
+                除了 1 和本身，其他都不能整除 的叫质数
+                循环，从1开始到自己本身结束
+                    1 和 自己本身不需要考虑
+                    可以从2开始
+                    当大于数字的一半的时候，肯定不能整除
+                    当一个数字能开出平方根，带着个整数平方根就可以结束了
+                    因为有 break 关键字，可以跳出循环
+                    到什么位置循环结束不重要了
+                    结束为
+                        数字 1
+                        数字 / 2 取整
+                        数字 开平方根
+                判断一个数是不是质数
+                    不是质数，可以在循环过程中得到答案的
+                    是质数，循环结束位才能知道
+                    要等到循环结束
+                注意：
+                    只要需要等到循环结束拿结果的时候
+                        一定不能在循环里面使用if else
+                    一半处理使用假设法
+                        在循环之前定义一个假设条件
+                        只是在循环里面否定我的条件
+                
+
+        */
+        //    准备一个数字
+        //  默认从3开始
+        var n = 15;
+        // 假设一个变量
+        // 假设目前只有两个，是或者不是
+        // 布尔值也是两个，一个是true，一个是false
+        // var flag = '是质数'
+        var flag = true;
+        for(let i = 2;i<=parseInt(n / 2);i++){
+            // 判断是不是能整除
+            if(n % i === 0){
+                // 有一个数字整除了
+                // 表示假设出问题了，直接否定
+                // flag = '不是质数'
+                flag = false
+                break;
+            }
+        }
+        // 循环结束，如果循环里面没有否定我的假设，那么我的假设就是真的
+        // 
+        console.log(flag);
+    </script>
+</body>
+
+</html>

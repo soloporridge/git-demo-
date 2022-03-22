@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 
+        
+            数据类型转 数值
+                把其他数据类型转换成数值类型
+                
+                1.Number() 强制转换
+                    语法number(要转换的数据)
+                    返回值：转换好的数据
+                    特点：
+                        会把要转化的内容当作一个整体来看
+                        能转换成数字结果，就是数字
+                        不能转换成数字结果的 就是 NaN
+                2.parseInt()
+                    语法：parseInt(要转换的数据)
+                    返回值：转换好的数据类型
+                    特点：
+                        把要转换的任何内容一位一位的看
+                        如果第一位就不能转换数字 直接返回NaN
+                        如果第一位可以，就看第二位，
+                        以此类推直到不能转换为数字的位置为止
+                    注意：不认识小数点
+                3.parseFloat()
+                    语法：parseFloat(要转换的数据)
+                    返回值：转换好的数据类型
+                    特点；
+                        和parseInt的解析规则一模一样
+                        只不过多认识一个小数点而已
+                4.取正负值
+                    语法：+正变量 或 -负变量
+                    返回值：转换好的数据结果
+                    特点：
+                        和Number的解析规则一模一样
+                5.非加法的数学运算
+                    语法：
+                        a * 1;
+                        1 - 0;
+                        特点：
+                            和Number方法解析规则一模一样
+
+                    
+        */
+       // 1.Number()
+       var s1 = '100';
+       var res1 = Number(s1);
+       console.log(res1);// 数值类型 100；
+       var s2 = 'a';
+       /* 
+            a没办法转换成一个 合法 的数字
+            又非得转换成数字
+            那返回结果就是NaN
+       */
+       console.log(Number(s2));//NaN
+
+
+       // 2.parsInt()
+       var s2 = '100a1';
+       var res2 = parseInt(s2);// 100
+       console.log(res2);
+
+       var b1 = true;
+       var res3 = parseInt(b1)//转换为 NaN
+       var res4 = Number(b1)//转换为 1
+       console.log(res3,res4);
+       var s3 = '100.321';
+       console.log(Number(s3));// 100.321
+       console.log(parseInt(s3));//100因为点是非数字
+
+
+       //3.parseFloat
+       var s3 = '100.1a1';
+       var res4 = parseFloat(s3);//100.1
+       console.log(res4);
+
+
+       // 4.取正负值
+        var s4 = '100';
+        var res5 = +s4;
+        var res6 = -s4;//取负值的时候会改变大小
+        console.log(res5,res6);
+
+        // 非加法的数学运算
+        var s5 = '200';
+        var res7 = s5 * 1;
+        var res8 = s5 / 1;
+        var res9 = s5 - 0;
+        var res10 = s5 / true
+        console.log(res7,res8,res9,res10);
+    </script>
+</body>
+</html>

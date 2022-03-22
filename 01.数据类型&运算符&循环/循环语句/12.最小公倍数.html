@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        /* 
+        
+                最小公倍数
+                    循环，从相对大的那个数字开始，两个数字的乘积结束
+        
+                    规律
+                        5 和 6
+                         6 7 8 9 10 11 12 13 14 15 16 ...
+                        循环过程中
+                            改变初始值，每次加上一个相对大一些的数字
+        
+        */
+        // var n = 5;
+        // var m = 6;
+        // for(let i =6;i<=5 * 6;i+=6){
+        //    if(i % n === 0 && i % m ===0){
+        //        console.log(i);
+        //    }
+        // }
+
+        // var n = 5;
+        // var m = 6;
+        // var gbs = m;
+        // // 只要写while循环千万别写 恒等式
+        // while (true) {
+        //     if (gbs % n === 0 && gbs % m === 0) {
+        //         break;
+        //     }
+        //     gbs += m;
+        // }
+        // console.log(gbs);
+
+
+        /* 
+        
+            思考
+                有一段代码肯定是要重复执行的
+                什么时候重复执行
+                 当 gbs % n ！==0 或者 gbs%m！==0；
+            while 循环，满足条件就循环，不满足条件就结束
+        
+        */
+        //    1.准备两个变量
+        var n = 5;
+        var m = 6;
+        //    2.调整两个数的大小
+        if (n > m) {
+            var tmp = n;
+            n = m;
+            m = tmp
+        }
+        var gbs = m;
+        // 3.循环
+        while (gbs % n !== 0 || gbs % m !== 0) {
+            // gbs 放大一点在来一遍
+            gbs += m;
+        }
+        // 直到循环结束，表示gbs就是两个数的最小公倍数
+        console.log(gbs);
+    </script>
+</body>
+
+</html>

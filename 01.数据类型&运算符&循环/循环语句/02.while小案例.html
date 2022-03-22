@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /* 
+        
+        案例
+            通过循环计算 1~10的和
+
+        思路
+            要能通过循环拿到 1~10的数字
+            要把每一个数字叠加到一起
+        
+        */
+    /* //    1.准备一个变量，接收叠加的结果
+        var sum = 0;
+        // 2.准备一个循环的初始化变量
+        var n = 1;
+        // 3.循环语法
+        while(n<=10){//4.判断条件
+            sum += n//要重复的代码
+            n++// 6.改变初始值
+            
+        }
+        console.log(sum);//输出总和 */
+
+
+        /* 
+        
+            阶乘
+                6的阶乘
+                6 * 5 * 4 6*3 6*2 6*1
+            思路
+                倒着循环
+                从 6 开始，到1结束
+                准备一个变量，接收阶乘的结果
+                
+        
+        */
+        var sum = 1;
+        var n = 6;
+        while(n>=1){
+           sum *= n
+           n--
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>

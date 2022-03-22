@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* 
+        
+            拆数字
+                拆一个四位数
+        
+        */
+        var num = 4654;
+        //    千位
+        var a = parseInt(num / 1000);
+        // console.log(a);
+        //    百位
+        // 方案1 num - a * 1000,用剩下的数字 / 100 取整
+        // var b = parseInt((num - a * 1000) / 100)
+        // console.log(b);
+
+        // 方案2 num 和 1000 取余，剩下的那个就是不能整除一千
+        // var b = parseInt((num % 1000) / 100)
+        // 方案三 num / 100 % 10
+        var b = parseInt((num / 100) % 10)
+        // console.log(b);
+
+        // 十位
+        // 方案1：num -a *1000 -b / 10用剩下的取整；
+        // var c = parseInt((num - a * 1000 - b * 100) / 10)
+
+        // 方案2：num 和 100 取余，剩下的就是不能被100整除的
+        var c = parseInt(num % 100 / 10)
+        // console.log(c);
+
+        // 个位
+        // 方案1 num - a * 1000 - b * 100 - c *10
+        // var d = parseInt(num - a * 1000 - b * 100 - c * 10)
+        // 方案2 num % 10
+        var d = parseInt(num % 10)
+        // console.log(d);
+
+        /* 
+
+            换算单位
+        
+        */
+
+        var timer = 1234657
+        // timer / 一天的秒数，然后取整
+        var t = parseInt(timer / (60 * 60 * 24));
+        // 换算小时 去掉整天以后在计算
+        var s = parseInt(timer % (60 * 60 * 24) / (60 * 60));
+        // 换算分钟，去掉整天和整小时的秒数，然后在计算
+        // 得到的就是不够一个小时的秒数
+        var f = parseInt(timer % (60 * 60 ) / 60);
+        // 换算分钟 得到不够一分钟的秒数
+        // 直接取余60
+        var m = parseInt(timer % 60)
+        console.log(t, s, f, m);
+
+    </script>
+</body>
+
+</html>

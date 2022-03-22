@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /* 
+            if小练习
+
+            1. 判断一个数是不是偶数
+            当 一个数字 / 2 能整除的时候表示 偶数
+             一个数字 % 2 得到 0的时候表示能整除
+        */
+
+
+        var n = 10;
+        // if(n%2===0){
+        //     console.log('偶数');
+        // }else{
+        //     console.log('奇数');
+        // }
+
+
+
+        // 一个数字 %2 的时候 要么 0 要么不为0
+        // 从数字的角度出发， 0 是false 非0全是true
+        // if (n % 2) {
+        //     // 能进入 if条件 说明 n%2不一定是0
+        //     console.log('奇数');
+        // } else {
+        //     // 能进入 else 条件，说明n%2 一定是0
+        //     console.log('偶数');
+        // }
+
+
+        // 2.判断一个数字在不在某一个范围内
+        // 比如判断 n 是不是在 15 和 20之间
+        // 数学：15 <= n <=20
+        // JS: 一个运算符 并且 另外一个运算符
+        // 》 15 <= n && n<=20
+
+        var n = 15;
+        // 15<=100 得到true
+        // true <= 20 得到true
+        // if (15 <= n <= 20) {
+        //     console.log(1);
+        // }
+
+        // if (15 <= n && n <= 20) {
+        //     console.log(1);
+        // }
+
+        /* 
+         3.判断平年还是闰年；
+            闰年：
+                1.年份可以被4整除
+                2.整百年份不能被100整除
+                3.整百年份可以被400整除
+           条件：
+                1. year %4 === 0
+                2.year %100 !===0;
+                3.year% 400 ===0
+            关系：
+                条件1 && 条件二 || 条件三
+
+         */
+        var year = 2020;
+        if (year % 4 === 0 && year % 100 === 0 || year % 100 === 0){
+            console.log('闰年');
+        }else{
+            console.log('平年');
+        }
+
+        console.log(2000%100);
+        console.log(312%2);
+    </script>
+</body>
+
+</html>

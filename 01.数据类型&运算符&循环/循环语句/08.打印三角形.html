@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* 
+        
+                页面上打印第一个三角形
+                *
+                **
+                ***
+                ****
+        
+                分析
+                    第1行1个
+                    第2行2个
+                    第3行3个
+                    第n行第n个
+        */
+        // 1.循环出现多少行
+       /*  for (let i = 1; i <= 9; i++) {
+            //得到的数字是1~9
+            console.log(i);
+            // 当i = 1 的时候出现一个*
+            // 当i = 2 的时候出现两个*
+            for (var j = 1; j <= i; j++) {
+                // 输出⭐
+                document.write('⭐ ')
+            }
+            // 里层循环没执行一遍，输出换行
+            document.write('<br/>')
+        }
+        document.write('<br/>') */
+        /* 
+        
+        第二个三角形
+        * * * * *
+        * * * *
+        * * *
+        * *
+        * 
+        分析：
+            第1行9个
+            第2行8个
+            第3行7个
+            第9行1个
+        */
+
+        /* for (let i = 1; i <= 9; i++) {
+            console.log(i);
+            // 当 i === 1 的时候 输出9个
+            // 当 i === 2 的时候 输出8个
+            for (let j = i; j <= 9; j++) {
+                document.write('⭐ ')
+            }
+            document.write('<br/>')
+        } */
+
+
+
+        /* 
+        
+            第三个三角形
+             * * * *
+               * * *
+                 * *
+                   *
+            分析
+                第1行0个空格 9个星号
+                第2行1个空格 8个星号
+        
+        */
+       /*  for (let i = 1; i <= 9; i++) {
+            // 要出对应的空格
+            // 当 i === 1 的时候 执行0次
+            // 当 i === 2 的时候 执行1次
+            for (let k = 1; k < i; k++) {
+                document.write('&nbsp&nbsp&nbsp&nbsp&nbsp')
+            }
+
+
+
+            //    要出对应的星号
+            for (let j = i; j <= 9; j++) {
+                document.write('⭐ ')
+            }
+            // 要出对应的换行
+            document.write('<br/>')
+        } */
+
+        for(let i = 1;i<=9;i++){
+            for(let k = 9;k>i;k--){
+                document.write('&nbsp&nbsp\t\t')
+            }
+            for(let j = 1; j <=i;j++){
+                document.write('⭐')
+            }
+            document.write('<br/>')
+        }
+    </script>
+</body>
+
+</html>

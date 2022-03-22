@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /* 
+        
+            案例
+                以用户第一原则
+                给用户一些选项，必须按照我的来
+                使用 prompt()
+        
+        */
+
+      /*   do{
+            //把重复执行代码和改变初始值放在一起
+            var text = prompt('1')
+          
+        }   while(text!=='yes') */
+       
+        // 改写while 的时候，会把初始值提取出来
+        // 重复执行代码的时候，在复制一遍
+
+        var text = prompt('1');
+        while(text !== 'yes'){
+            text = prompt('1')
+        }
+    </script>
+</body>
+</html>

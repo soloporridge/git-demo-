@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        /* 
+        
+        数据类型转 布尔值
+            把其他的数据类型转成布尔值
+
+            1.Boolean()     非空为真 非零为真
+                语法：Boolean(要转换的数据)
+                返回值：转换好的数据
+                特点：
+                    在JS里面 只有五个内容转成false
+                        -> 0
+                        -> 空的字符串
+                        -> NaN
+                        -> undefined
+                        -> null
+                    其他所有内容都是true
+        
+        */
+
+        console.log(Boolean(100));
+        console.log(Boolean('100'));
+        console.log(Boolean(1));
+        console.log([]);//true
+        console.log(Boolean(''));
+        console.log(Boolean(null));
+        console.log(Boolean(undefined));
+        console.log(Boolean(NaN));
+        console.log(Boolean(0));
+    </script>
+</body>
+</html>

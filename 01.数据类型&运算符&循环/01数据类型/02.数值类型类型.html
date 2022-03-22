@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            JS 的数据类型
+                JS把一个变量可以存储的各种各样的数据类型,做了一个区分
+                分成了两大类型
+
+                    1.基本数据类型(简单数据类型)
+                    1-1 Number 数值类型
+                    1-2 Strong 字符串数据类型
+                    1-3 Boolean 布尔值
+                    1-4 Undefined 空
+                    1-5 null 空
+
+                    2.复杂数据类型(地址数据类型/引用数据类型)
+                    2-1 Object
+                    2-2 Function
+
+        */
+       /* 
+        1.Number 数值 
+            一切十进制标示的数字
+            一切浮点数(小数)
+            其他进制的数字
+                =》 十六进制以0x开头
+                =》 八进制以0开头
+                => 0b开头表示二进制
+            科学计数法
+                =》 比较大的数字使用科学计数法
+                 2e5 2 * 10的五次方  
+            NaN
+                =》Not a Number 非数字       
+       */
+
+       var n1 = 100;
+       var n2 = -100;
+       var n3 = 0x11;//标示存储的是十六进制  输出时会自动转成十进制
+       var n4 = 077;//表示存储的是八进制的数字
+       var n5 = 0b100; //表示存储的是二进制的数字
+       var n6 = 2e5;// 存储的是 2 * 10 的五次方
+       var n7 = NaN;//表示存储的是非数字类型
+       console.log(n6);
+    </script>
+</body>
+</html>

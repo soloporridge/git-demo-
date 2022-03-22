@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /* 
+            switch小练习
+                根据分月在控制台输出对应的天数
+        */
+
+        // month 的取值范围是1~12
+        //var month = 1;
+
+        //可以利用switch的穿透来完成
+        // switch (month) {
+        //     case 1:
+        //         console.log('31天');
+        //         break;
+        //     case 2:
+        //         console.log('28天');
+        //         break;
+        //     case 3:
+        //         console.log('31天');
+        //         break;
+        // }
+
+        var month = 8
+        // 从第一个满足条件的case开始穿透
+        //  只要没有 break 就向下穿透，直到遇到break为止
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                console.log('31天');
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                console.log('30天');
+                break;
+            case 2:
+                console.log('28天');
+                break;
+            default:
+                console.log('输入一个数');
+
+        }
+
+
+        // 输入年月份和天数  判断某年的第几天
+        var year = 2020;
+        var month = 12;
+        var date = 29;
+
+        switch (month) {
+            case 12:
+                date += 30;
+            case 11:
+                date += 31;
+            case 10:
+                date += 30;
+            case 09:
+                date += 31;
+            case 08:
+                date += 31;
+            case 07:
+                date += 30;
+            case 06:
+                date += 31;
+            case 05:
+                date += 30;
+            case 04:
+                date += 31;
+            case 03:
+                if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+                    date += 29;
+                } else {
+                    date += 28;
+                }
+            case 2:
+            date += 31;     
+            case 1:
+            date += 0;
+            console.log(date);
+                break;
+            default:
+                console.log(11111);
+        }
+    </script>
+</body>
+
+</html>
